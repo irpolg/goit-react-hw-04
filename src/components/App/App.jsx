@@ -30,7 +30,7 @@ export default function App() {
 
     useEffect(() => {
         if (searchImage === '') {
-        return;
+            return;
         }
     
         async function getData() {
@@ -68,7 +68,7 @@ export default function App() {
     };
 
     const handleModalClose = () => {
-    setModalParams(modalInitialParams);
+        setModalParams(modalInitialParams);
   };
 
     useEffect(() => {

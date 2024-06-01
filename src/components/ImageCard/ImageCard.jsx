@@ -1,11 +1,8 @@
-//import { GridItem } from "../GridItem/GridItem";
 import css from './ImageCard.module.css'
 
-
-// export default function ImageCard ({src, alt}) {
 export default function ImageCard({ card, onImageClick }) {
     return (
-        <div className={css.divcard}>
+        <div className={css.divCard}>
             <img className={css.img}
                 src={css.src}
                 alt={css.alt}
