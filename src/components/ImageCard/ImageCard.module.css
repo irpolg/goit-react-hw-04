@@ -5,3 +5,7 @@
     position: relative;
     overflow: hidden;
 }
+
+.description {
+    width: 100%;
+}
