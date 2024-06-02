@@ -76,29 +76,29 @@ export default function App() {
     }, [images, page]);
 
     return (
-    <div ref={appRef}>
-        <h1 className={css.title}>Search Image Service</h1>
-        <SearchBar onSearch={handleSearch} />
+        <div ref={appRef}>
+            <h1 className={css.title}>Search Image Service</h1>
+            <SearchBar onSearch={handleSearch} />
 
-        {isError && <ErrorMessage />}
+            {isError && <ErrorMessage />}
             
-        {images.length > 0 && (
-            <ImageGallery cards={images} onImageClick={handleImageClick} />
-        )}
-
-        {images.length > 0 && !isLoading && showLoadMoreBtn && (
-            <LoadMoreBtn onClick={handleLoadMoreClick} />
-        )}
-            
-        {isLoading && <Loader />}
-            {modalParams && (
-                <ImageModal
-                    url={modalParams.url}
-                    description={modalParams.description}
-                    isOpen={modalParams.isOpen}
-                    onClose={handleModalClose}
-                />
+            {images.length > 0 && (
+                <ImageGallery cards={images} onImageClick={handleImageClick} />
             )}
-    </div>
-  );
+
+            {images.length > 0 && !isLoading && showLoadMoreBtn && (
+                <LoadMoreBtn onClick={handleLoadMoreClick} />
+            )}
+            
+            {isLoading && <Loader />}
+                {modalParams && (
+                    <ImageModal
+                        url={modalParams.url}
+                        description={modalParams.description}
+                        isOpen={modalParams.isOpen}
+                        onClose={handleModalClose}
+                    />
+                )}
+        </div>
+    );
 }

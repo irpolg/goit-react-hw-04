@@ -11,15 +11,13 @@ export default function ImageModal({isOpen, onClose, url, description}) {
     return (
             <Modal
                 className={css.modal}
-            // isOpen={modalIsOpen}
                 isOpen={isOpen}
-                // onAfterOpen={afterOpenModal}
-            // onRequestClose={closeModal}
+                overlayClassName={css.overlayModal}
+                ariaHideApp={false}
                 onRequestClose={onClose}
-                // style={customStyles}
-                // contentLabel="Example Modal"
+                shouldCloseOnEsc={true}
             >
-                <img className={css.img} src={url} alt={description} />          
+                <img className={css.imgModal} src={url} alt={description} />          
             </Modal>
   );
 }
