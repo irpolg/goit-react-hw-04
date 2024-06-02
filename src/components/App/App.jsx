@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import css from './App.module.css';
 
 // import getPhotos from '../unsplash-api-fetch';
-import getPhotos from '../unsplash-api';
+import getImages from '../unsplash-api';
 import ImageGallery from '../ImageGallery/ImageGallery';
 import ImageModal from '../ImageModal/ImageModal';
 import Loader from '../Loader/Loader';
@@ -37,7 +37,7 @@ export default function App() {
             try {
                 setIsLoading(true);
                 setIsError(false);
-                const { results, total_pages } = await getPhotos(searchImage, page);
+                const { results, total_pages } = await getImages(searchImage, page);
                 setImages(prevImages => {
                 return [...prevImages, ...results];
                 });

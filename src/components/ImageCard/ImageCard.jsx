@@ -20,7 +20,7 @@ export default function ImageCard({ card, onImageClick }) {
     );
 }
 
-/* ТЗ 
+/* ТЗ onImageClick
 <div>
   <img src="" alt="" />
 </div> */
