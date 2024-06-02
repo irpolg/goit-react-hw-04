@@ -12,9 +12,9 @@ export default function SearchBar({ onSearch }) {
     
     return (
         <header className={css.header}>
-            <Toaster position="top-center"/>
-            <form className={css.searchForm}  onSubmit={handleSubmit}>
-                <input
+            <Toaster position="top-left"/>
+            <form  onSubmit={handleSubmit}>
+                <input className={css.searchInput}
                     name="searchImage"
                     type="text"
                     autoComplete="off"
