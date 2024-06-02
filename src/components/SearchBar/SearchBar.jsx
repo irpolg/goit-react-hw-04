@@ -22,8 +22,8 @@ export default function SearchBar({ onSearch }) {
                     autoFocus
                     placeholder="Search images and photos"
                 />
-                {/* <button className={css.searchBtn} type="submit">Search</button> */}
-            <button type="submit">
+                {/* <button type="submit">Search</button> */}
+            <button className={css.searchBtn} type="submit">
                 <IoSearchOutline className={css.searchIcon} />
             </button>
 
