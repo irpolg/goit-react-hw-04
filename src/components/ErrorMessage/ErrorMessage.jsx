@@ -6,6 +6,6 @@ export default function ErrorMessage() {
             <p className={css.error}>
                 Error HTTP-query. Reload the page, please!
             </p>
-</div>
+        </div>
     )
 }

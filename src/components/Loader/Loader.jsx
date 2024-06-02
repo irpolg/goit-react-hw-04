@@ -9,8 +9,8 @@ export default function Loader() {
         <div className={css.loader}>
             <ProgressBar
                 visible={true}
-                height = '80'
-                width = '80'
+                height = '120'
+                width = '720'
                 wrapperClass = ''
                 wrapperStyle = {{}}
                 ariaLabel = 'progress-bar-loading'

@@ -3,12 +3,12 @@ import css from './ImageCard.module.css'
 export default function ImageCard({ card, onImageClick }) {
     return (
         <div className={css.divCard}>
-            <img className={css.img}
-                src={css.src}
-                alt={css.alt}
+            <img className={css.imgCard}
+                src={card.urls.small}
+                alt={card.alt_description}
                 onClick={onImageClick}
             />
-            <ul className={css.description}>
+            <ul className={css.descriptionUl}>
                 <li>
                     <p>Photo by {card.user.name}</p>
                 </li>

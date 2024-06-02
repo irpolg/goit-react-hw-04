@@ -1,10 +1,11 @@
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
+    list-style-type: none;
 }
     
-/* .galleryCard {
-    width: calc((100% - 30px) / 4);
+.galleryCard {
+    width: calc((100% - 60px) / 4);
     height: 360px;
-} */
+}

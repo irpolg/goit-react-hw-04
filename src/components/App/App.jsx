@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import css from './App.module.css';
 
-// import getPhotos from '../unsplash-api-fetch';
 import getImages from '../unsplash-api';
 import ImageGallery from '../ImageGallery/ImageGallery';
 import ImageModal from '../ImageModal/ImageModal';
@@ -17,7 +16,6 @@ const modalInitialParams = {
 };
 
 export default function App() {
-// const App = () => {
     const [searchImage, setSearchImage] = useState('');
     const [images, setImages] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
@@ -79,18 +77,18 @@ export default function App() {
 
     return (
     <div ref={appRef}>
-        <h1 className={css.title}>ImageGallery Search</h1>
+        <h1 className={css.title}>Search Image Service</h1>
         <SearchBar onSearch={handleSearch} />
 
         {isError && <ErrorMessage />}
             
         {images.length > 0 && (
-            <ImageGallery items={images} onImageClick={handleImageClick} />
+            <ImageGallery cards={images} onImageClick={handleImageClick} />
         )}
 
         {images.length > 0 && !isLoading && showLoadMoreBtn && (
             <LoadMoreBtn onClick={handleLoadMoreClick} />
-                )}
+        )}
             
         {isLoading && <Loader />}
             {modalParams && (
